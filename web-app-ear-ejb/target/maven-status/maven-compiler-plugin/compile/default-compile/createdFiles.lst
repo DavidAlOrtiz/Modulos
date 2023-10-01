@@ -1,0 +1,6 @@
+com\web\app\ear\ejb\services\UsuarioServiceImp.class
+com\web\app\ear\ejb\ProducerResources.class
+com\web\app\ear\ejb\entity\Usuario.class
+com\web\app\ear\ejb\services\IUsuarioService.class
+com\web\app\ear\ejb\repository\IUsuariosRespository.class
+com\web\app\ear\ejb\repository\UsuarioService.class
