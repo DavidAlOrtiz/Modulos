@@ -10,6 +10,11 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import java.time.LocalDate;
 
 @Entity
@@ -20,13 +25,20 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
+    @NotEmpty
     private String nombre;
     
+    @NotNull
+    @Min(10)
+    @Max(100000)
     private double precio;
     
+    @NotNull
     @Column(name = "fecha_creacion")
     private LocalDate fechaCreacion;
     
+    @NotNull
+    @Size(min = 2, max = 10)
     private String sku;
     
     @ManyToOne(fetch = FetchType.LAZY)

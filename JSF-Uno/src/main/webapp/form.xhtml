@@ -13,11 +13,14 @@
             <h:panelGrid>
                 <h:outputLabel value="Nombre" for="nombre" />
                 <h:inputText id="nombre" required="true" value="#{producto.nombre}" />
+                <h:messages style="color:red" for="nombre" />
                 
                 <h:outputLabel value="Precio" for="precio" />
                 <h:inputText id="precio" required="true" value="#{producto.precio}" />
+                <h:messages style="color:red" for="precio" />
                 <h:outputLabel value="Sku" for="sku" />
                 <h:inputText id="sku" required="true" value="#{producto.sku}" />
+                <h:messages style="color:red" for="sku" />
                 
                 <h:outputLabel value="fecha" for="fecha" />
                 <h:inputText id="fecha" value="#{producto.fechaCreacion}" 
@@ -25,6 +28,7 @@
                     <f:convertDateTime type="localDate"  pattern="yyyy-MM-dd" />
                     <f:passThroughAttribute name="type" value="date" />
                 </h:inputText>
+                <h:messages style="color:red" for="fecha" />
                 
                 <h:outputLabel value="Categoria" for="categoria"  />
                 <h:selectOneMenu id="categoria" value="#{producto.categoria}">
